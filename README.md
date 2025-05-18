@@ -22,11 +22,8 @@ Ultimately, this study bridges the gap between quantitative financial modeling a
 ## Directory Structure
 
 ```
-Movie-Revenue-Prediction/
-│
-├── fig
-│   └─ intro.png
-│
+Movie_Success_And_Sentiment_Study/
+│   
 ├── Helper Files
 │   ├── Best Features
 │   │   ├── feature_scores.py
@@ -83,37 +80,27 @@ Movie-Revenue-Prediction/
 │   └── README.md
 │
 ├── Reports
-│   ├── Proposal
-│   │   ├── proposal.pdf
-│   │   └── proposal.tex
+│   ├
+│   │ 
+│   │   
 │   ├── 1st Project Report
-│   │   ├── 1st_Project_Report.pdf
-│   │   ├── 1st_Project_Report.tex
-│   │   └── pics
-│   │       ├── gross_histogram.png
-│   │       ├── k_best.png
-│   │       ├── model_accuracy_plot.png
-│   │       ├── null_values.png
+│   │
+│   │                
 │   └── Final Report
 │       ├── Final_Report.pdf
 │       ├── Final_Report.tex
-│       └── pics
-│           ├── gross_histogram.png
-│           ├── k_best.png
-│           ├── model_accuracy_plot.png
-│           ├── null_values.png
-│           ├── pie_chart.png
-│           └── R2_score_tracking.png
-│
+|
+│       
+│           
 ├── revised datasets
 │   ├── movies.csv
 |   ├── output.csv
 │   └── README.md
 │
-├── .gitignore
-├── LICENSE
+├── IMDB sentiment ipynb
+├── ScreenShots
 ├── main.py
-├── README.md
+├── movie_sentiment.py
 ├── requirements.txt
 └── streamlit_app.py
 ```
@@ -255,25 +242,4 @@ We evaluated our models using two key metrics: R² Score (Coefficient of Determi
 
 The developed Gradient Boosting and XGBoost models demonstrates promising accuracy and generalization capabilities, facilitating informed decision-making in the film industry to maximize profits.
 
-## Citation
 
-If you found this work useful, please consider citing it as:
-
-```
-@misc{udandarao2024movie,
-      title={Movie Revenue Prediction using Machine Learning Models},
-      author={Vikranth Udandarao and Pratyush Gupta},
-      year={2024},
-      eprint={2405.11651},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
-
-## Contact
-
-Please feel free to open an issue or email us at [vikranth22570@iiitd.ac.in](mailto:vikranth22570@iiitd.ac.in) or [pratyush22375@iiitd.ac.in](mailto:pratyush22375@iiitd.ac.in).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
