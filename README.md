@@ -17,7 +17,7 @@ Through rigorous preprocessing, feature engineering (e.g., vote-to-year ratios, 
 
 Ultimately, this study bridges the gap between quantitative financial modeling and qualitative audience insights, offering a scalable and practical toolset for revenue forecasting and decision optimization in the cinematic domain.
 
-<img src="fig/intro.png" alt="Movie Revenue Prediction diagram" width="500" height="400">
+<img src="(https://github.com/Divyanshu1Dubey/Movie_Succes_And_Sentiment_Study/blob/main/Screenshot%202025-05-19%20011848.png)" alt="MovieSuccess_And_sentiment_Prediction diagram" width="500" height="400">
 
 ## Directory Structure
 
