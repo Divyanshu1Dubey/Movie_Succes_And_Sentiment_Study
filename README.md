@@ -1,21 +1,21 @@
-# Movie Revenue Prediction
+# Movie Success Prediction and Sentiment Study
 
 [![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/release/python-360/)
 [![sk-learn](https://img.shields.io/badge/scikit-learn-grey.svg?logo=scikit-learn)](https://scikit-learn.org/stable/whats_new.html)
-[![arXiv](https://img.shields.io/badge/arXiv-2405.11651-b31b1b.svg)](https://arxiv.org/abs/2405.11651)
 [![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-brightgreen.svg)](https://movie-revenue-prediction.streamlit.app)
 
-[Academia Paper](https://www.academia.edu/119091410/Movie_Revenue_Prediction) | [Wiki](https://deepwiki.com/Vikranth3140/Movie-Revenue-Prediction)
 
-## Introduction
 
-In the contemporary film industry, accurately predicting a movie's earnings is paramount for maximizing profitability. This project aims to develop a sophisticated machine learning model to forecast movie earnings based on a comprehensive set of input features, including the movie name, MPAA rating, genre, year of release, IMDb rating, votes by the watchers, director, writer, leading cast, country of production, budget, production company, and runtime.
+## 🎬 Introduction
+In today’s dynamic and high-stakes film industry, the ability to accurately predict a movie’s box office revenue is both a technological challenge and a business imperative. Studios, investors, and marketers are increasingly seeking data-driven methodologies to inform decisions ranging from casting and budget allocation to release timing and promotional strategies. However, the inherently unpredictable nature of audience preferences, combined with the multifactorial structure of movie success, makes revenue forecasting a non-trivial task.
 
-Numerous factors influence a movie's earnings, and the optimal combination of these factors remains elusive. Our machine learning model seeks to uncover the most significant factors for box office success by analyzing real data from a diverse array of movies produced globally.
+This project introduces a comprehensive machine learning framework for movie revenue prediction, leveraging structured metadata such as genre, MPAA rating, release year, budget, cast, director credentials, IMDb scores, and more. Additionally, we integrate sentiment analysis from IMDb user reviews using VADER (Valence Aware Dictionary and sEntiment Reasoner) to incorporate unstructured audience feedback into our predictive models.
 
-We hypothesize that certain parameters, such as the director's track record and the genre of the film, hold more significance in predicting movie revenue than others. Observations suggest that despite lower IMDb ratings, action-oriented films often perform well at the box office, while genres such as comedy or emotional dramas, despite potentially higher IMDb ratings, may not achieve comparable revenue outcomes. These insights highlight the complex interplay between film attributes and audience preferences.
+We hypothesize that certain features—particularly budget, genre, director track record, and audience sentiment—have significant predictive power for determining financial success. Interestingly, our exploratory analysis reveals that action films, despite often having lower IMDb ratings, consistently outperform high-rated emotional dramas or comedies at the box office, underscoring the complex interplay between perceived quality and market performance.
 
-By leveraging these diverse attributes, our goal is to construct a robust predictive model that can offer valuable insights and aid decision-making in the film industry. Ultimately, this will help filmmakers optimize their movie production strategies for maximum profit and popularity.
+Through rigorous preprocessing, feature engineering (e.g., vote-to-year ratios, sentiment polarity scores, budget efficiency), and ensemble learning algorithms (Gradient Boosting, XGBoost), we build and evaluate predictive models that achieve high generalization performance. Our framework not only identifies the most influential factors but also supports real-time predictions via both a Streamlit web interface and a Command Line Interface (CLI).
+
+Ultimately, this study bridges the gap between quantitative financial modeling and qualitative audience insights, offering a scalable and practical toolset for revenue forecasting and decision optimization in the cinematic domain.
 
 <img src="fig/intro.png" alt="Movie Revenue Prediction diagram" width="500" height="400">
 
