@@ -1,0 +1,115 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage{caption}
+\usepackage{float}
+\geometry{margin=1in}
+
+\title{Movie Revenue Prediction Using Machine Learning Models}
+\author{Divyanshu\\
+\textit{Data Science, IIT Madras \& Parul University}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This report presents a machine learning approach to predict movie revenue based on various movie attributes. We explore data preprocessing, feature engineering, multiple regression models, and evaluate their performance using R² and MSLE metrics. The best performing models, Gradient Boosting and XGBoost, provide significant insights into factors driving box office success.
+\end{abstract}
+
+\section{Introduction}
+
+In the contemporary film industry, accurately predicting a movie's earnings is paramount to maximizing profitability. This project aims to develop sophisticated machine learning models that utilize diverse features such as genre, director, budget, and more to predict movie revenue.
+
+\section{Dataset Description}
+
+The dataset contains attributes including movie title, MPAA rating, genre, IMDb rating, votes, director, writer, budget, runtime, and production company. The data was sourced from Kaggle's movie dataset \cite{grijalva_kaggle}.
+
+\section{Data Preprocessing and Feature Engineering}
+
+Missing values were imputed using median strategy, categorical variables were label encoded, and numerical features were scaled using StandardScaler. We engineered features such as vote score ratio, budget per minute, and binary flags for recent and high-budget movies.
+
+\section{Models and Methods}
+
+We trained several regression models:
+
+\begin{itemize}
+  \item Linear Regression
+  \item Decision Tree
+  \item Random Forest
+  \item Bagging
+  \item Gradient Boosting
+  \item XGBoost
+\end{itemize}
+
+Hyperparameter tuning was performed using GridSearchCV.
+
+\section{Results and Evaluation}
+
+\begin{table}[H]
+\centering
+\caption{Model Performance Metrics}
+\begin{tabular}{lcccc}
+\toprule
+Model & Training R² & Training MSLE & Testing R² & Testing MSLE \\
+\midrule
+Linear Regression & 0.6181 & 0.0053 & 0.6520 & 0.0051 \\
+Decision Tree & 0.8310 & 0.0024 & 0.5994 & 0.0059 \\
+Bagging & 0.8380 & 0.0023 & 0.7105 & 0.0042 \\
+Gradient Boosting & 0.8750 & 0.0016 & 0.7350 & 0.0040 \\
+XGBoosting & 0.8633 & 0.0018 & 0.7402 & 0.0041 \\
+Random Forest & 0.8475 & 0.0022 & 0.7235 & 0.0041 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{fig/model_accuracy_plot.png}
+\caption{Comparison of model R² scores on training and testing data.}
+\label{fig:model_accuracy}
+\end{figure}
+
+\section{Visualizations}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/gross_histogram.png}
+\caption{Histogram of Movie Gross Revenue.}
+\label{fig:gross_histogram}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{fig/k_best.png}
+\caption{Top Features contributing to the prediction using SelectKBest.}
+\label{fig:top_features}
+\end{figure}
+
+\section{Conclusion}
+
+Gradient Boosting and XGBoost models showed superior accuracy and generalization. Feature engineering and hyperparameter tuning significantly enhanced performance, providing actionable insights for movie revenue prediction.
+
+\section{Future Work}
+
+Future work includes integrating social media sentiment, trailer views, and expanding the dataset to include international movies.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+\bibitem{grijalva_kaggle}
+Daniel Grijalva,
+\textit{Movies Dataset}, Kaggle,
+\url{https://www.kaggle.com/datasets/danielgrijalvas/movies}
+
+\bibitem{udandarao2024movie}
+Vikranth Udandarao and Pratyush Gupta,
+\textit{Movie Revenue Prediction using Machine Learning Models},
+arXiv preprint 2405.11651, 2024.
+\url{https://arxiv.org/abs/2405.11651}
+\end{thebibliography}
+
+\end{document}
