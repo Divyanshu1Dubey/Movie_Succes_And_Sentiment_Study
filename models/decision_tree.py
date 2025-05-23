@@ -61,7 +61,6 @@ plt.xlabel("Actual Values")
 plt.ylabel("Predicted Values")
 plt.legend()
 plt.show()
-
 # Feature importance
 feature_importance = model.feature_importances_
 sorted_idx = np.argsort(feature_importance)
