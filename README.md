@@ -6,6 +6,9 @@
 
 
 
+
+
+
 ## 🎬 Introduction
 In today’s dynamic and high-stakes film industry, the ability to accurately predict a movie’s box office revenue is both a technological challenge and a business imperative. Studios, investors, and marketers are increasingly seeking data-driven methodologies to inform decisions ranging from casting and budget allocation to release timing and promotional strategies. However, the inherently unpredictable nature of audience preferences, combined with the multifactorial structure of movie success, makes revenue forecasting a non-trivial task.
 
